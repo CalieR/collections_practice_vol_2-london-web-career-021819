@@ -31,7 +31,7 @@ end
 def merge_data(keys, data)
   # should return an array of hashes
   keys.each do |k, v|
-    v.each do |x, y|
+    k.each do |x, y|
       k.merge(x)
     end
   end
