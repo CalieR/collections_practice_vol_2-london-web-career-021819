@@ -25,7 +25,7 @@ def remove_non_strings(array)
 end
 
 def count_elements(array)
-  a.group_by { |x| x }.map {|key, value| key[:count] = value.size ; key }
+  array.group_by { |x| x }.map {|key, value| key[:count] = value.size ; key }
 end
 
 # ANOTHER WAY:
