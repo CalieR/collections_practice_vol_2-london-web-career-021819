@@ -36,8 +36,11 @@ end
 
 def merge_data(keys, data)
   # should return an array of hashes
-  data[0].values.map.with_index { |v, i| keys[i].merge(v) }
+  data[0].values # values of first element of data array are hashes of details for each name (names are the keys)
+  .map.with_index do |v, i|
+    keys[i].merge(v)
   binding.pry
+end
 end
 
 def find_cool(names_hash)
