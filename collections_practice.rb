@@ -37,6 +37,9 @@ end
 def merge_data(keys, data)
   # should return an array of hashes
   binding.pry
+  data.each do |k, v|
+    binding.pry
+  end
 end
 
 def find_cool(names_hash)
