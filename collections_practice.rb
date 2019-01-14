@@ -50,7 +50,7 @@ def find_cool(names_hash)
 end
 
 def organize_schools(schools)
-  organised = {} 
+  organised = {}
     schools.each do |k,v|
     organised[v[:location]] = [] # <-- remember, this is how you add a key/value pair to a hash:
     # ^ hash name, key, value
