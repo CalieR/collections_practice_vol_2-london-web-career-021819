@@ -29,7 +29,9 @@ def count_elements(array)
 end
 
 def merge_data(keys, data)
-  keys | data
+  result = [] # should return an array of hashes
+     binding.pry
+  result
 end
 
 def find_cool(names_hash)
