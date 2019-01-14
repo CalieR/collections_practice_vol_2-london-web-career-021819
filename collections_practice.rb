@@ -25,7 +25,7 @@ def remove_non_strings(array)
 end
 
 def count_elements(array)
-  array.count 
+  array.count { |x| x > 0 }
 end
 
 def merge_data(keys, data)
