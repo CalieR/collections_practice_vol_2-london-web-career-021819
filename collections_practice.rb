@@ -31,12 +31,9 @@ end
 def merge_data(keys, data)
   # should return an array of hashes
   keys.each do |k, v|
-    # if k[:first_name] == "blake"
-    
     v.each do |x, y|
-      binding.pry
-    # end
-  end
+      k.merge(x)
+    end
   end
 
 end
