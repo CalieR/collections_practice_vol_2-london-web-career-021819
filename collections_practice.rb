@@ -36,9 +36,8 @@ end
 
 def merge_data(keys, data)
   # should return an array of hashes
-  binding.pry
   data.each do |k, v|
-    keys.merge(k) 
+    keys.merge(k)
   end
 end
 
