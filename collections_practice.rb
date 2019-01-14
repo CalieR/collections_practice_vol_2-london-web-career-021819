@@ -37,6 +37,7 @@ end
 def merge_data(keys, data)
   # should return an array of hashes
   data[0].values.map.with_index { |v, i| keys[i].merge(v) }
+  binding.pry
 end
 
 def find_cool(names_hash)
