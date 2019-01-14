@@ -36,10 +36,10 @@ end
 
 def merge_data(keys, data)
   data[0].values # data is an array, values of element at index 0 are hashes of details for each name (keys are name and motto)
-  .map.with_index do |v, i| # map returns new array. with index enables specific elements of each array to be merged.
+  .map.with_index { |v, i| # map returns new array. with index enables specific elements of each array to be merged.
     keys[i].merge(v) # merge firstname/motto with awesomess/height/lastname
   # binding.pry
-  end
+}
 end
 
 def find_cool(names_hash)
