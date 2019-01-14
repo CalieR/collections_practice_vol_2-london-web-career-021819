@@ -50,12 +50,13 @@ def find_cool(names_hash)
 end
 
 def organize_schools(schools)
-  organised = {}
-  schools.each do |k,v|
-  organised[v[:location]] = []
-  end
-  organised.each do |town, names|
-    schools.each do |k, v|
+  organised = {} 
+    schools.each do |k,v|
+    organised[v[:location]] = [] # <-- remember, this is how you add a key/value pair to a hash:
+    # ^ hash name, key, value
+    end
+  organised.each do |town, names| # iterate over new hash
+    schools.each do |k, v|        # add school if its town matches one on that hash loop
       if town == v[:location]
         names.push k
       end
