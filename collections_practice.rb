@@ -36,8 +36,7 @@ end
 
 def merge_data(keys, data)
   # should return an array of hashes
-  data.each do |k, v|
-
+  keys[0].values.map.with_index { |v, i| data[i].merge(v)}
   end
 end
 
