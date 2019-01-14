@@ -36,8 +36,7 @@ end
 
 def merge_data(keys, data)
   # should return an array of hashes
-  keys.each do |k, v|
-  end
+  keys.merge(data)
 end
 
 def find_cool(names_hash)
