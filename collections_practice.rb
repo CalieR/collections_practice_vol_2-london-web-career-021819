@@ -36,7 +36,7 @@ end
 
 def merge_data(keys, data)
   # should return an array of hashes
-  keys.concat(data)
+  binding.pry
 end
 
 def find_cool(names_hash)
