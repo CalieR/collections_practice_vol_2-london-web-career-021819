@@ -33,7 +33,7 @@ def merge_data(keys, data)
   keys.each do |k, v|
     binding.pry
   end
-  
+
 end
 
 def find_cool(names_hash)
