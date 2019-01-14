@@ -35,11 +35,10 @@ end
 # end
 
 def merge_data(keys, data)
-  # should return an array of hashes
-  data[0].values # values of first element of data array are hashes of details for each name (names are the keys)
-  .map.with_index do |v, i|
-    keys[i].merge(v)
-  binding.pry
+  data[0].values # data is an array, values of element at index 0 are hashes of details for each name (keys are name and motto)
+  .map.with_index do |v, i| # map returns new array. with index enables specific elements of each array to be merged.
+    keys[i].merge(v) # merge firstname/motto with awesomess/height/lastname
+  # binding.pry
   end
 end
 
