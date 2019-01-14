@@ -1,6 +1,5 @@
 require 'pry'
 
-# your code goes here
 def begins_with_r(array)
   array.all? { |word| word.start_with?("r") }
   # returns true if all words start with letter r, false if not
