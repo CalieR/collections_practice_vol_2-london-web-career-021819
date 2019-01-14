@@ -50,5 +50,16 @@ def find_cool(names_hash)
 end
 
 def organize_schools(schools)
-  
+  organised = {}
+  schools.each do |k,v|
+  organised[v[:location]] = []
+  end
+  organised.each do |town, names|
+    schools.each do |k, v|
+      if town == v[:location]
+        names.push k
+      end
+    end
+  end
+  organised
 end
