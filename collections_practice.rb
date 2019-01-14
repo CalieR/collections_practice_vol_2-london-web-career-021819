@@ -24,17 +24,19 @@ def remove_non_strings(array)
   array.select { |thing| thing.class == String }
 end
 
+def count_elements(array)
+  # non-destructive, returns a new array without the duplicates:
+  array.uniq
+  .map do |x| 
+    {:name => x[:name], count: array.count(x)}
+  end
+end
+
+# ANOTHER WAY: .group_by returns a hash: the keys are the result of the block, the values are an array of the elements that match that key. Then .map (returns array) over each element of the new hash, creating the new key/value pairs required to pass the test...
 # def count_elements(array)
-#   # .group_by returns a hash: the keys are the result of the block, the values are an array of the elements that match that key.
 #   array.group_by { |x| x }
 #   .map {|key, value| key[:count] = value.size ; key }
-#   # .map (returns array) over each element of the new hash, creating the new key/value pairs required to pass the test
 # end
-
-# ANOTHER WAY:
-def count_elements(array)
-  array.uniq.map { |x| {:name => x[:name], count: array.count(x)} }
-end
 
 def merge_data(keys, data)
   # should return an array of hashes
