@@ -40,7 +40,7 @@ def merge_data(keys, data)
   .map.with_index do |v, i|
     keys[i].merge(v)
   binding.pry
-end
+  end
 end
 
 def find_cool(names_hash)
