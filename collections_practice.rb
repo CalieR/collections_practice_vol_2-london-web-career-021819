@@ -34,10 +34,9 @@ end
 #   .map {|key, value| key[:count] = value.size ; key }
 # end
 
-def merge_data(keys, data)
-  data[0].values # data is an array, values of element at index 0 are hashes of details for each name (keys are name and motto)
-  .map.with_index { |v, i| # map returns new array. with index enables specific elements of each array to be merged.
-    keys[i].merge(v) # merge firstname/motto with awesomess/height/lastname
+def merge_data(keys, data) # both arrays
+  data[0].values # at index 0 of data, keys are name/motto, values are awesomeness/height/lastname
+  .map.with_index { |v, i| keys[i].merge(v) # iterate over awesomeness/height/lastname and merge with corresponding element from firstname/motto
   # binding.pry
   }
 end
