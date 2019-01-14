@@ -39,7 +39,7 @@ def merge_data(keys, data)
   .map.with_index { |v, i| # map returns new array. with index enables specific elements of each array to be merged.
     keys[i].merge(v) # merge firstname/motto with awesomess/height/lastname
   # binding.pry
-}
+  }
 end
 
 def find_cool(names_hash)
@@ -51,5 +51,5 @@ def find_cool(names_hash)
 end
 
 def organize_schools(schools)
-
+  
 end
