@@ -25,8 +25,13 @@ def remove_non_strings(array)
 end
 
 def count_elements(array)
-  array.count { |x| x == {:name => "blake"} }
+  a.group_by { |x| x }.map {|key, value| key[:count] = value.size ; key }
 end
+
+# ANOTHER WAY:
+# def count_elements(array)
+#   a.uniq.map { |x| {:name => x[:name], count: a.count(x)} }
+# end
 
 def merge_data(keys, data)
   # should return an array of hashes
