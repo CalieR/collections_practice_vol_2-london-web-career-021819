@@ -39,6 +39,7 @@ def merge_data(keys, data)
   binding.pry
   data.each do |k, v|
     binding.pry
+  
   end
 end
 
