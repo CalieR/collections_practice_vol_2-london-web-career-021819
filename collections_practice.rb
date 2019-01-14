@@ -49,6 +49,6 @@ def find_cool(names_hash)
   end
 end
 
-def organize_schools()
+def organize_schools(schools)
 
 end
