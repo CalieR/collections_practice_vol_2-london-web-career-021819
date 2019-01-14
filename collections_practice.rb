@@ -25,9 +25,9 @@ def remove_non_strings(array)
 end
 
 def count_elements(array)
-  # non-destructive, returns a new array without the duplicates:
+  # non-destructive, returns new array without duplicates:
   array.uniq
-  .map do |x| 
+  .map do |x|
     {:name => x[:name], count: array.count(x)}
   end
 end
